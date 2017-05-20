@@ -618,10 +618,11 @@ body{
 	margin: 0 auto;
 }
 
-.alert-success{
-	color : lightblue;
+.alert-success caption{
+	
 	padding-top: 20px;
-	font-size: 18px;
+	font-size: 28px;
+
 }
 
 
@@ -653,11 +654,19 @@ body{
 }
 .table{
   width:80%;
+border:1px solid black;
+border-radius: 15px;
   background-color:white;
   padding:20px 10px;
   text-align: center;
   margin: 20 auto;
   
+}
+
+.table thead th{
+	color:red;
+	
+
 }
 
 .table tbody tr{

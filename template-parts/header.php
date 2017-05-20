@@ -3,10 +3,9 @@
 			<ul>
 				<li> <a href="app.php"> TẢI APP TLT </a> </li>
 				<li> <a href="about.php"> CHĂM SÓC KHÁCH HÀNG </a> </li>
-				
-				<li> <a href="admin/login.php"> ĐĂNG NHẬP </a> </li>
-				<li> <a href="#"> ĐĂNG KÝ </a> </li>
-				<li> <a href="#"> CHANGE LANGUAGE </a> </li>
+				<li> <a href="index.php?r=registeruser"> ĐĂNG KÝ THÀNH VIÊN </a> </li>
+				<li> <a href="index.php?r=loginuser"> ĐĂNG NHÂP</a> </li>
+				<li> <a href="index.php?r=thongtin"> THÔNG TIN NGƯƠÌ DÙNG </a> </li>
 			</ul>
 		</div> <!-- .sub-menu -->
 			<div class="logo">

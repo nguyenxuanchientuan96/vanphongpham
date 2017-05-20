@@ -14,7 +14,7 @@
 				<?php endwhile;?>
 
 				<li><a href="index.php?r=about" title="lienhe">LIÊN HỆ</a></li>	
-				<li><a href="admin">ĐĂNG NHẬP QUẢN TRỊ</a></li>
+				<li><a href="admin">QUẢN TRỊ</a></li>
 			</ul>
 		</div>
 		<!-- end menu -->

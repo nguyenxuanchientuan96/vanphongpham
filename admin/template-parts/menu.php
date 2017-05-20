@@ -20,7 +20,7 @@
 
 
 				<li>
-					<a href="index.php?r=list-config" title="tất cả ">Tất cả config</a>
+					<a href="index.php?r=list-config" title="tất cả ">Tất cả quảng cáo</a>
 					<ul>
 						<a href="index.php?r=add-config" title="Thêm ">Thêm</a>
 					</ul>

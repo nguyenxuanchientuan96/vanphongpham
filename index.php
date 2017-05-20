@@ -29,6 +29,15 @@
 					case "about":
 						include 'about.php';
 						break;
+					case "registeruser":
+						include 'registeruser.php';
+						break;
+					case "loginuser":
+						include 'loginuser.php';
+						break;
+					case "thongtin":
+						include 'thongitn.php';
+						break;
 
 					
 					default : 

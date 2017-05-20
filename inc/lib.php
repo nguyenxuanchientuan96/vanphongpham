@@ -13,7 +13,7 @@
 	$db_password = ""; 
 	$db_name = "vpp"; //database name
 		//end db config 
-
+$hien_loi = false; // hien thi thong bao loi : true / false
 
 		//language 
 	require_once( "lang.php" );
@@ -22,6 +22,11 @@
 
 
 	//end config 
+
+
+	if( !$hien_loi ){
+		ini_set("display_errors" , 0 );
+	}
 
 	if( !$conn ){
 		echo "<h1>Có lỗi xảy ra khi kết nối db </h1>";
@@ -67,6 +72,20 @@
 		return false;
 	}
 
+	function login_user($user,$password){
+
+		global $conn;
+		$sql = "SELECT id FROM dang_ky WHERE username='{$user}' AND password=('{$password}') ";
+
+		if( $rs = mysqli_query( $conn , $sql) ){
+			if( mysqli_num_rows($rs) > 0  ){
+				$_SESSION["username"] = $user;
+				return true;
+			}
+		}
+		return false;
+	};
+
 
 
 
@@ -98,12 +117,42 @@
 		return preg_match($pattern, $email);
 	}
 
-	function validate_username( $name ){
-		$pattern = "/^([a-zA-Z]+){2}$/";
-		return preg_match( $pattern, $name );
+	function validate_username( $username ){
+		$pattern = "/(\s)+/";
+		return !preg_match( $pattern, $username );
 	}
 
+	function validate_name( $name ){
+		$name = trim($name);
+		if( empty($name) ) return false;
+		if( strlen( $name ) < 2  ) return false;
+		$arrName = explode(" ", $name);
+
+		foreach ($arrName as $v) {
+			if( $v == "" )
+				return false;
+		}
+
+		return true ; 
+	}
+
+	function validate_password($pass){
+		return strlen($pass) > 6 ? true : false;
+	}
 	//end validate functions 
+
+	function username_exists($username){
+		global $conn;
+		$sql = "SELECT id FROM dang_ky WHERE username='{$username}' ";
+		return  mysqli_num_rows(mysqli_query( $conn , $sql )) > 0  ;
+
+	}
+
+	function email_exists( $email ){
+		global $conn;
+		$sql = "SELECT id FROM dang_ky WHERE email='{$email}' ";
+		return  mysqli_num_rows(mysqli_query( $conn , $sql )) > 0  ;
+	}
 
 
 

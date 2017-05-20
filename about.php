@@ -14,8 +14,8 @@
 		$email = trim(strip_tags( $_POST["email"] ));
 		$content = trim(strip_tags($_POST["content"]) );
 
-		if( empty( $ten ) || !validate_username( $ten ) )  {
-			$errors_arr["ten"] = "Tên không được để trống ! ";
+		if( empty( $ten ) || !validate_name( $ten ) )  {
+			$errors_arr["ten"] = "Tên không được để trống hoặc không nằm trong bảng chữ cái ! ";
 		};
 
 		if( empty( $diachi ) )  {
@@ -54,7 +54,7 @@
 			foreach( $errors_arr as $v ){
 				$str .=  "- ". $v . " <br/> ";
 			}
-			echo $str;
+			//echo $str;
 			var_dump( $errors_arr );
 		}
 
@@ -86,6 +86,7 @@
 		</label>
 		<br>
 		<label>
+
 			
 			<p>Số điện thoại :</p> 
 			<input type="text" name="sdt" />

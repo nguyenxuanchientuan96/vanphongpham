@@ -1,3 +1,4 @@
+
 		<div class="body-left">
 		<!-- 	<?php 
 				$sidebar = get_config("left-sidebar");
@@ -24,6 +25,9 @@
 			</ul>
 			</div>
 		</div><!---end .body-right-->
+	
+
+
 
 
 
@@ -92,7 +96,7 @@
 
 			<div class="body-right">
 				<p class="block-body-button" style="background-color: #F36F36; width: 80%; margin-top: -2%;">
-						<a href="index.php?r=cart&action=checkout">THANH TOÁN</a>
+						<a href="#">THANH TOÁN</a>
 					</p>
 				<img src="img/banner1.jpg" style="height: 450px;">
 			</div>

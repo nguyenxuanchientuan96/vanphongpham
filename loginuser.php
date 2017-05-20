@@ -1,33 +1,43 @@
-
-
 <?php 
 	if( empty($_SESSION) ){
 		session_start();
 	} 
-?>
+?>  
+
 <?php require_once("template-parts/head.php");  ?>
 <?php require_once("template-parts/header.php");?>
 <?php require_once("template-parts/menu.php");?>
 
-<?php require_once("../inc/lib.php"); ?>
+<?php require_once("inc/lib.php"); ?>
 <body>		
 	<!-- start body  -->
+	
 		<div class="body">
 <?php 
 	if(  isset($_POST["submit"])){
 		$username = mysqli_real_escape_string($conn, $_POST["username"]);
 		$password = mysqli_real_escape_string($conn, $_POST["password"] );
 
-		if( login( $username , $password  ) ){
-			$_SESSION["username"] = $username;
-			redirect("index.php?r=admin");
-		}else{
-			echo alert("Sai mật khẩu hoặc tên tài khoản ! " , "alert-error");
+		$sql2="SELECT * FROM dangkithanhvien where password={$password}";
+		$rs2=mysqli_query($conn,$sql2);
+		$row2=mysqli_fetch_array($rs2,MYSQLI_ASSOC);
+		if($row2){
+				$_SESSION["name"] = $username;
+				echo "Đăng nhập thành công";
+				
+			
+
+		
+		}
+		else{
+			echo alert("that bai");
 		}
 	}
-?>	
+
+?>
+<a href="index.php?row=<?php echo $row2['id']; ?>"> Trang chủ</a>
+
 		
-			<h2 class="alert alert-success" style="color: red">Bạn phải đăng nhập để vào trang quản trị</h2>
 			<div class="form">
 				<form  method="post">
 				
