@@ -14,7 +14,7 @@
 		$email = trim(strip_tags( $_POST["email"] ));
 		$content = trim(strip_tags($_POST["content"]) );
 
-		if( empty( $ten ) || !validate_name( $ten ) )  {
+		if( empty( $ten ) || !validate_username( $ten ) )  {
 			$errors_arr["ten"] = "Tên không được để trống hoặc không nằm trong bảng chữ cái ! ";
 		};
 
