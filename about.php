@@ -72,7 +72,7 @@
 	?>
 
 	<div class="about-contact">
-		<h2> LIÊN Hệ GÓP Ý </h2>
+		<h2> LIÊN HỆ GÓP Ý </h2>
 		<form  method="post" accept-charset="utf-8">
 			
 		<label>

@@ -9,14 +9,14 @@
 ?>
 
 <table class="table">
-	<caption class="alert alert-success" style="color: #12422F">Tất cả sp</caption>
+	<caption class="alert alert-success" style="color: #12422F">Tất cả sản phẩm</caption>
 	
 	<thead>
 		<tr>
-			<th>id</th>
-			<th>ảnh</th>
-			<th>Tên sp</th>
-			<th>giới thiệu</th>
+			<th>ID</th>
+			<th>Ảnh</th>
+			<th>Tên sản phẩm</th>
+			<th>Giới thiệu</th>
 			<th>Danh mục</th>
 			<th>Giá tiền</th>
 			<th>Sửa</th>

@@ -5,7 +5,7 @@
 		$p2 = mysqli_real_escape_string($conn, $_POST["password2"]);
 		$info = mysqli_real_escape_string($conn, $_POST["info"]);
 
-		if( !preg_match("/^\w+$/", $name ) ){
+		if( preg_match("/^\w+$/", $name ) ){
 			echo alert("Tên người dùng không hợp lệ ! " , "alert-error");
 			return;
 		}

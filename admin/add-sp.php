@@ -42,7 +42,7 @@
 	}
 ?>
 			<div class="form">
-			<h2 class='alert alert-success' style="color: red">Thêm sp mới</h2>
+			<h2 class='alert alert-success' style="color: red">Thêm sản phẩm mới</h2>
 				<form  method="post" accept-charset="utf-8" enctype="multipart/form-data">
 
 					<h2>Ảnh sản phẩm</h2>
